@@ -1,0 +1,18 @@
+.image-bckg{
+    background-image: url(http://127.0.0.1:5173/src/assets/Inspira%C3%A7%C3%A3o.png);
+    background-repeat: no-repeat;
+   
+}
+
+.tudo {
+    background-color: #E4E4E4;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    
+}
