@@ -1,15 +1,17 @@
-import { useState } from 'react'
-import './App.css'
-import Login from "./pages/Login/Login"
+import React from 'react';
+import './App.css';
+import Login from "./pages/Login/Login";
+import Cadastro from './pages/Cadastro/Cadastro';
 
-function App() {
+
+
+export default function App() {
 
   return (
     <div className="App">
-      <Login />
-      
+    <Login />
+    
     </div>
-  )
+  );
 }
 
-export default App

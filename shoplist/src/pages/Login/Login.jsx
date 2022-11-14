@@ -20,7 +20,7 @@ function Login() {
             <div className="login">
                 <input type="text" placeholder="EMAIL"></input>
                 <input type="text" placeholder="SENHA"></input>
-                <p>Você ainda não tem uma conta?<a href="/">Cadastre-se</a></p>
+                <p>Você ainda não tem uma conta?<a href="/Cadastro">Cadastre-se</a></p>
                 <button type="submit">ENTRAR</button>
             </div>
             </div>

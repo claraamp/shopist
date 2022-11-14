@@ -8,11 +8,37 @@
     background-color: #E4E4E4;
     display: flex;
     justify-content: space-between;
+    padding-right: 10%;
     
 }
 
 .right-side {
     display: flex;
     flex-direction: column;
+    padding-left: 10%;
     
+    
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-texto{
+    color: #010037;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 { 
+    font-family: 'Raleway', serif;
+    font-size: 36px;
+    
+}
+
+p {
+    font-family: 'Abyssinica SIL', serif;
+
 }
