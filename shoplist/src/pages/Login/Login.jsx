@@ -1,17 +1,14 @@
 import React from "react";
-import '../Login/Login.css';
 import Logo from "/Logo.png";
 import * as S from './LoginStyle.js'
 
-
-
-function Login() {
+export default function Login() {
     return (
         <S.Container>
             <S.Image />
             <S.BoxSide>
             <div className="logo-texto">
-                <img src={Logo} alt="logo shopist"></img>
+                <img src={Logo} alt="Logo Shopist" />
                 <h1>Seja bem-vindo!</h1>
                 <p>Faça seu cadastro gratuitamente e tenha acesso à melhor plataforma de lista de compras que você já viu!</p>
             </div>
@@ -26,6 +23,3 @@ function Login() {
     )
    
 }
-
-
-export default Login
