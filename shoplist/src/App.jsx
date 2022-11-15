@@ -1,15 +1,18 @@
+import React from 'react'
 import { useState } from 'react'
 import './App.css'
 import Login from "./pages/Login/Login"
+import Inicio from './pages/Inicio/Inicio'
+import Search from './Components/SearchList/Search'
+import { GlobalStyle } from './GlobalStyle/GlobalStyle'
 
-function App() {
+export default function App() {
 
   return (
     <div className="App">
-      <Login />
+      <GlobalStyle />
+      <Inicio />
       
     </div>
   )
 }
-
-export default App
