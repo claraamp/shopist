@@ -4,6 +4,7 @@ import Exit from '../../assets/exit.svg'
 import Boy from '../../assets/boy.png'
 import Search from '../../Components/SearchList/Search'
 import * as S from './InicioStyle'
+import Popup from '../../components/Popup/Popup'
 
 export default function Inicio() {
   return (
@@ -12,7 +13,7 @@ export default function Inicio() {
         <S.Logo src={Logo} alt="Logo Shopist" />
         <Search />
         <S.ExitBtn>
-          <img src={Exit} alt="Icon de saída" />
+        <img src={Exit} alt="Icon de saída" />
         </S.ExitBtn>
       </S.BoxTop>
       <S.BoxBottom>
