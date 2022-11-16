@@ -24,6 +24,26 @@ right: 2em;
     color: #E4E4E4;
 }
 
+@media only screen and (max-width: 880px) {
+    width: 65%;
+    right: 0em;
+    left: 3em;
+    font-size: 1.4em;
+    background-size: 35px;
+    padding: 2em 0em 2em 1em;
 
+}
+
+@media only screen and (max-width: 660px) {
+    width: 70%;
+    font-size: 1.2em;
+}
+
+@media only screen and (max-width: 450px) {
+    background-size: 30px;
+    font-size: .9em;
+    padding: 2.2em 0em 2.2em 1em;
+
+}
 
 `
