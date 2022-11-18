@@ -4,6 +4,7 @@ import Exit from '../../assets/exit.svg'
 import Boy from '../../assets/boy.png'
 import Search from '../../Components/SearchList/Search'
 import * as S from './InicioStyle'
+import List from '../../Components/List/List'
 
 export default function Inicio() {
   return (
@@ -16,10 +17,10 @@ export default function Inicio() {
         </S.ExitBtn>
       </S.BoxTop>
       <S.BoxBottom>
-        <div>
+        {/* <div>
           <img src={Boy} alt="Ilustração de homem escrevendo em bloco de notas" />
           <p>Ainda não há nada por aqui...</p>
-        </div>
+        </div> */}
         <S.AddList>Criar uma nova lista</S.AddList>
       </S.BoxBottom>
     </S.Container>
