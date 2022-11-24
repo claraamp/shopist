@@ -4,9 +4,9 @@ import Exit from '../../assets/exit.svg'
 import Boy from '../../assets/boy.png'
 import Search from '../../Components/SearchList/Search'
 import Popup from '../../Components/Popup/Popup'
-import * as S from './InicioStyle'
+import * as S from './HomeStyle'
 
-export default function Inicio() {
+export default function Home() {
 
   const [ btnPopup, setBtnPopup ] = useState(false);
 
