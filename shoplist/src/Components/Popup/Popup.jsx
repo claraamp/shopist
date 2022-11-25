@@ -1,16 +1,17 @@
 import React from 'react';
+import * as S from './PopupStyle'
 
+export default function Popup({id='modal', onClose = () => {}}) {
 
-function Popup(props) {
-    return (props.trigger) ? (
-        <div className='popup'>
-            <div className='inside'>
-                <input type="text" placeholder='Digite aqui o nome de sua nova lista'></input>
-                <button type="submit">CRIAR</button>
-                { props.children }
-            </div>
-        </div>
-    ): "";
+    const handleOutsideClick = (e) =>{
+        if(e.target.id === id) onClose();
+    }
+    return (
+        <S.Box id={id} onClick={handleOutsideClick}>
+            <S.PopUp>
+                <S.NameList type="text" placeholder='Digite aqui o nome de sua nova lista' />
+                <S.CreateBtn type="submit">Criar</S.CreateBtn>
+            </S.PopUp>
+        </S.Box>
+    );
 }
-
-export default Popup

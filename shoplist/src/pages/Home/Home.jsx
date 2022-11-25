@@ -1,19 +1,22 @@
-import React from 'react'
+import React, { useState} from 'react'
 import Logo from "/Logo.png"
 import Exit from '../../assets/exit.svg'
 import Boy from '../../assets/boy.png'
 import Search from '../../Components/SearchList/Search'
-import * as S from './InicioStyle'
-import Popup from '../../components/Popup/Popup'
+import Popup from '../../Components/Popup/Popup'
+import * as S from './HomeStyle'
 
-export default function Inicio() {
+export default function Home() {
+
+  const [ btnPopup, setBtnPopup ] = useState(false);
+
   return (
     <S.Container>
       <S.BoxTop>
         <S.Logo src={Logo} alt="Logo Shopist" />
         <Search />
         <S.ExitBtn>
-        <img src={Exit} alt="Icon de saída" />
+        <img src={Exit} alt="Ícone de saída" />
         </S.ExitBtn>
       </S.BoxTop>
       <S.BoxBottom>
@@ -21,8 +24,11 @@ export default function Inicio() {
           <img src={Boy} alt="Ilustração de homem escrevendo em bloco de notas" />
           <p>Ainda não há nada por aqui...</p>
         </div>
-        <S.AddList>Criar uma nova lista</S.AddList>
+        <S.AddList onClick={() => setBtnPopup(true)}>Criar uma nova lista</S.AddList>
       </S.BoxBottom>
+      {btnPopup ? (
+        <Popup onClose={() => setBtnPopup(false)} />
+      ) : null }
     </S.Container>
   )
 }
