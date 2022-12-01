@@ -2,8 +2,24 @@ import styled from 'styled-components'
 import Add from '../../assets/add.svg'
 
 export const Container = styled.section`
+width: 100%;
 height: 100vh;
+display: flex;
+flex-direction: column;
 background-color: #2924FF;
+
+@media only screen and (max-width: 1120px) {
+    height: 100%;
+    padding-bottom: 2em;
+}
+`
+
+export const Contain = styled.div`
+height: 70%;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+
 `
 
 export const BoxTop = styled.section`
@@ -45,13 +61,23 @@ img{
 }
 `
 
+export const BoxList = styled.section`
+display: flex;
+flex-wrap: wrap;
+gap: 2em;
+width: 100%;
+justify-content: center;
+width: 95%;
+margin: 0 auto;
+`
+
 export const BoxBottom = styled.section`
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-width: 100vw;
-height: 70vh;
+width: 100%;
+margin-bottom: 1em;
 
 
 div{
