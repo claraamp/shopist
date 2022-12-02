@@ -69,7 +69,7 @@ module.exports = {
         let idlistas = req.body.idlistas;
     
         try {
-          let response = await db.query('DELETE FROM listas_itens WHERE idlistas=?', [idlistas]);
+          let response = await db.query('DELETE FROM listas WHERE idlistas=?', [idlistas]);
           res.json(response);
         } catch (error) {
           console.log(error);
