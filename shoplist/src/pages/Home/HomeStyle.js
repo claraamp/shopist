@@ -70,6 +70,19 @@ justify-content: center;
 width: 95%;
 margin: 0 auto;
 `
+export const ContainerList = styled.div`
+background-color: #010037;
+width: 18rem;
+height: 15em;
+color: #E4E4E4;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+padding-left: 1em;
+border-radius: .5em;
+box-shadow: 8px 8px 3px rgba(0, 0, 0, 0.3);
+overflow: hidden;
+`
 
 export const BoxBottom = styled.section`
 display: flex;

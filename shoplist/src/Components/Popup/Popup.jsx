@@ -7,7 +7,7 @@ export default function Popup({name='modal', onClose = () => {}}) {
     const [criarLista, setCriarLista] = useState('');
     const criar = () => {
         axios.post('http://localhost:5174/listas', {nomelista: criarLista}).then((response)=>{console.log(response)})
-        onClose();
+        onClose()
     };
 
     const handleOutsideClick = (e) =>{

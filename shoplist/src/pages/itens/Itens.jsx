@@ -16,7 +16,6 @@ export default function Itens() {
       try {
         const res = await axios.get('http://localhost:5174/itens').then(res => useItens(res.data));
         console.log(itens)
-        
       } catch (error) {
         console.log(error)
       }
