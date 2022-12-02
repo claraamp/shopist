@@ -11,6 +11,7 @@ const ControllerLista = require ('./controllers/ControllersLista');
 app.get('/itens', ControllerLista.findAll); 
 app.post ('/listas', ControllerLista.insert);
 app.get('/listas', ControllerLista.find);
+app.get('/categorias', ControllerLista.order);
 
 app.listen(5174, () =>{
     console.log("rodando");

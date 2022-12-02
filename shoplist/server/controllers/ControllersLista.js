@@ -29,6 +29,15 @@ module.exports = {
         } catch (error) {
             console.log(error);
         }
+    },
+
+    async order (req,res) {
+        try {
+        let response = await db.query('SELECT * FROM categorias')
+        res.json(response[0]);
+        } catch (error) {
+            console.log(error);
+        }
     }
 
 }
