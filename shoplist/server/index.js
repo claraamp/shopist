@@ -1,8 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const bodyparser = require('body-parser');
-var path = require('path');
+
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
@@ -13,6 +12,7 @@ const ControllerLista = require('./controllers/ControllersLista');
 app.get('/itens', ControllerLista.findAll); 
 app.post ('/listas', ControllerLista.insert);
 app.get('/listas', ControllerLista.find);
+app.get('/categorias', ControllerLista.order);
 
 
 
