@@ -8,8 +8,10 @@ import Search from '../../Components/SearchList/Search'
 import Popup from '../../Components/Popup/Popup'
 import * as S from './HomeStyle'
 import List from '../../Components/List/List'
+import axios from 'axios'
 
 export default function Home() {
+
 
   const [ btnPopup, setBtnPopup ] = useState(false);
   const [ listas, useListas ] = useState([])

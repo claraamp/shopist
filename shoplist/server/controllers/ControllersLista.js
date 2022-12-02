@@ -10,6 +10,7 @@ module.exports = {
             console.log(error);
         }
     },
+
     async insert (req,res) {
         let data = {
             "nomelista": req.body.nomelista
@@ -38,7 +39,33 @@ module.exports = {
         } catch (error) {
             console.log(error);
         }
-    }
+    },
+
+    async show (req,res) {
+        try {
+        let response = await db.query('SELECT * FROM listas_itens')
+        res.json(response[0]);
+        } catch (error) {
+            console.log(error);
+        }
+    },
+
+    async add (req,res) {
+        let data = {
+            "idlistas": req.body.idlistas,
+            "idproduto": req.body.idproduto,
+            "nome_produto": req.body.nome_produto
+
+        }
+        try {
+            let response = await db.query('INSERT INTO listas_itens SET ?', [data]);
+            res.json(response);
+        } catch (error) {
+            console.log(error);
+        }
+    },
+
+
 
 }
     

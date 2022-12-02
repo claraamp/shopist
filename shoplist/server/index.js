@@ -9,10 +9,12 @@ app.use(cors());
 
 const ControllerLista = require('./controllers/ControllersLista');
 
-app.get('/itens', ControllerLista.findAll); 
+app.get('/itens', ControllerLista.findAll);
 app.post ('/listas', ControllerLista.insert);
 app.get('/listas', ControllerLista.find);
 app.get('/categorias', ControllerLista.order);
+app.post('/additens', ControllerLista.add);
+app.get('/getitens', ControllerLista.show);
 
 
 
