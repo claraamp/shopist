@@ -15,6 +15,8 @@ app.get('/listas', ControllerLista.find);
 app.get('/categorias', ControllerLista.order);
 app.post('/additens', ControllerLista.add);
 app.get('/getitens', ControllerLista.show);
+app.delete('/deletarlista', ControllerLista.delete);
+app.delete('/deletaritens', ControllerLista.gone);
 
 
 
