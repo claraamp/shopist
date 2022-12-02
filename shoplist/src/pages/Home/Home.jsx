@@ -1,4 +1,5 @@
 import React, { useState} from 'react'
+import { Link } from 'react-router-dom'
 import Logo from "/Logo.png"
 import Exit from '../../assets/exit.svg'
 import Boy from '../../assets/boy.png'
@@ -16,9 +17,11 @@ export default function Home() {
       <S.BoxTop>
         <S.Logo src={Logo} alt="Logo Shopist" />
         <Search placeholder={"Que lista você deseja?"}/>
-        <S.ExitBtn>
-        <img src={Exit} alt="Ícone de saída" />
-        </S.ExitBtn>
+        <Link to='/login'>
+          <S.ExitBtn>
+            <img src={Exit} alt="Ícone de saída" />
+          </S.ExitBtn>
+        </Link>
       </S.BoxTop>
       <S.Contain>
         <S.BoxList>
@@ -26,11 +29,6 @@ export default function Home() {
           <List />
           <List />
           <List />
-          <List />
-          <List />
-          <List />
-          <List />
-          
         </S.BoxList>
         <S.BoxBottom>
           {/* <div>

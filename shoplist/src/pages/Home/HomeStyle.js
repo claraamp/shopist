@@ -8,25 +8,16 @@ display: flex;
 flex-direction: column;
 background-color: #2924FF;
 
-@media only screen and (max-width: 1120px) {
+@media only screen and (max-width: 1300px) {
     height: 100%;
-    padding-bottom: 2em;
 }
-`
-
-export const Contain = styled.div`
-height: 70%;
-display: flex;
-flex-direction: column;
-justify-content: space-evenly;
-
 `
 
 export const BoxTop = styled.section`
 display: flex;
 align-items: center;
 justify-content: space-around;
-padding: 2em 2em 0em 0em;
+padding: 2em 0em 2em 0em;
 
 @media only screen and (max-width: 880px) {
     justify-content: space-between;
@@ -61,11 +52,20 @@ img{
 }
 `
 
+export const Contain = styled.div`
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+
+
+`
+
 export const BoxList = styled.section`
 display: flex;
 flex-wrap: wrap;
 gap: 2em;
-width: 100%;
+height: 100%;
 justify-content: center;
 width: 95%;
 margin: 0 auto;
@@ -76,8 +76,10 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+padding-bottom: 2em;
 width: 100%;
-margin-bottom: 1em;
+height:24vh; 
+
 
 
 div{
@@ -131,7 +133,6 @@ width: 17em;
 height: 3em;
 border: none;
 border-radius: .8em;
-margin-top: 2em;
 padding-left: 1.3em;
 font-size: 1.2em;
 font-family: 'Raleway', sans-serif;
