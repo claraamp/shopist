@@ -11,17 +11,15 @@ module.exports = {
         }
     },
     async insert (req,res) {
-        let nomelista = {
-            "nomelista":req.body.nomelista
+        let data = {
+            "nomelista": req.body.nomelista
         }
         try {
-            let response = await db.query('INSERT INTO listas(nomelista) VALUES (?)', [nomelista]);
+            let response = await db.query('INSERT INTO listas SET ?', [data]);
             res.json(response);
         } catch (error) {
             console.log(error);
         }
-
-       
     },
 
     async find (req,res) {

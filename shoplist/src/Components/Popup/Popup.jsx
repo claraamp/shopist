@@ -1,19 +1,26 @@
 import React, { useState } from 'react';
-import { Axios } from 'axios';
+import axios from 'axios';
 import * as S from './PopupStyle'
-import e, { application } from 'express';
+ 
+export default function Popup({name='modal', onClose = () => {}}) {
 
-export default function Popup({id='modal', onClose = () => {}}) {
+    const [criarLista, setCriarLista] = useState('');
+    const criar = () => {
+        axios.post('http://localhost:5174/listas', {nomelista: criarLista}).then((response)=>{console.log(response)})
+    };
 
     const handleOutsideClick = (e) =>{
-        if(e.target.id === id) onClose();
+        if(e.target.getAttribute('name') === name) onClose(); 
     }
     return (
-        <S.Box id={id} onClick={handleOutsideClick}>
+        <S.Box id={name} onClick={handleOutsideClick}>
             <S.PopUp>
-                <S.NameList type="text" placeholder='Digite aqui o nome de sua nova lista' />
-                <S.CreateBtn type="submit">Criar</S.CreateBtn>
-            </S.PopUp>
+                <S.NameList type="text" onChange={(event)=>{setCriarLista(event.target.value)}} placeholder='Digite aqui o nome de sua nova lista' />
+                <S.CreateBtn onClick={criar}>Criar</S.CreateBtn>
+            </S.PopUp> 
         </S.Box>
     );
 }
+
+
+
