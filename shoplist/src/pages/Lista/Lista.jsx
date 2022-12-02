@@ -1,7 +1,11 @@
-import React from 'react'
+import React from 'react';
+import List from '../../Components/List/List'
+
 
 export default function Lista() {
   return (
-    <div>Lista</div>
+    <>
+      <List />  
+    </>
   )
 }

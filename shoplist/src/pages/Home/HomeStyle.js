@@ -2,15 +2,22 @@ import styled from 'styled-components'
 import Add from '../../assets/add.svg'
 
 export const Container = styled.section`
+width: 100%;
 height: 100vh;
+display: flex;
+flex-direction: column;
 background-color: #2924FF;
+
+@media only screen and (max-width: 1300px) {
+    height: 100%;
+}
 `
 
 export const BoxTop = styled.section`
 display: flex;
 align-items: center;
 justify-content: space-around;
-padding: 2em 2em 0em 0em;
+padding: 2em 0em 2em 0em;
 
 @media only screen and (max-width: 880px) {
     justify-content: space-between;
@@ -45,14 +52,33 @@ img{
 }
 `
 
+export const Contain = styled.div`
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+
+
+`
+
+export const Box = styled.section`
+display: flex;
+flex-wrap: wrap;
+gap: 2em;
+height: 100%;
+justify-content: center;
+width: 95%;
+margin: 0 auto;
+`
+
 export const BoxBottom = styled.section`
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-width: 100vw;
-height: 70vh;
-
+padding-bottom: 2em;
+width: 100%;
+height:24vh; 
 
 div{
     display: flex;
@@ -69,14 +95,12 @@ p{
     font-size: 2em;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
-
 }
 
 @media only screen and (max-width: 880px) {
 
 div{
     margin-bottom: 2em;
-
 }
 p{
     font-size: 1.5em;
@@ -105,7 +129,6 @@ width: 17em;
 height: 3em;
 border: none;
 border-radius: .8em;
-margin-top: 2em;
 padding-left: 1.3em;
 font-size: 1.2em;
 font-family: 'Raleway', sans-serif;
