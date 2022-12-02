@@ -61,7 +61,7 @@ justify-content: space-evenly;
 
 `
 
-export const BoxList = styled.section`
+export const Box = styled.section`
 display: flex;
 flex-wrap: wrap;
 gap: 2em;
@@ -80,8 +80,6 @@ padding-bottom: 2em;
 width: 100%;
 height:24vh; 
 
-
-
 div{
     display: flex;
     flex-direction: column;
@@ -97,14 +95,12 @@ p{
     font-size: 2em;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
-
 }
 
 @media only screen and (max-width: 880px) {
 
 div{
     margin-bottom: 2em;
-
 }
 p{
     font-size: 1.5em;

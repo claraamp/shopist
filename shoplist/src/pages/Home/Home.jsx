@@ -24,17 +24,13 @@ export default function Home() {
         </Link>
       </S.BoxTop>
       <S.Contain>
-        <S.BoxList>
-          <List />
-          <List />
-          <List />
-          <List />
-        </S.BoxList>
-        <S.BoxBottom>
-          {/* <div>
+        <S.Box>
+          <div>
             <img src={Boy} alt="Ilustração de homem escrevendo em bloco de notas" />
             <p>Ainda não há nada por aqui...</p>
-          </div> */}
+          </div>
+        </S.Box>
+        <S.BoxBottom>
           <S.AddList onClick={() => setBtnPopup(true)}>Criar uma nova lista</S.AddList>
         </S.BoxBottom>
       </S.Contain>

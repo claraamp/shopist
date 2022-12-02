@@ -16,7 +16,7 @@ export default function List() {
             <S.BtnTrash />
           </S.BoxItem>
         </S.Item>
-        
+         
         <S.Item>
           <S.BoxItem>
             <S.NameItem>
