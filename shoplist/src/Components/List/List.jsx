@@ -7,13 +7,13 @@ export default function List() {
       <S.Title>Feira semanal</S.Title>
       <S.ListItems>
         <S.Item>
-          <S.NameItem>
-            <S.BoxItem>
+          <S.BoxItem>
+            <S.NameItem>
             <input type="checkbox" name="item" id="item" />
             <label htmlFor='item'>Banana</label>
-            </S.BoxItem>
-            <button> </button>
-          </S.NameItem>
+            </S.NameItem>
+            <S.BtnTrash />
+          </S.BoxItem>
         </S.Item>
 
       </S.ListItems>

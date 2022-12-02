@@ -30,6 +30,7 @@ export default function Home() {
           <List />
           <List />
           <List />
+          
         </S.BoxList>
         <S.BoxBottom>
           {/* <div>

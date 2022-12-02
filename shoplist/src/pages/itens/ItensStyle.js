@@ -3,7 +3,7 @@ import ArrowLeft from '../../assets/arrow-left.svg'
 
 export const Container = styled.section`
 width: 100%;
-height: 100vh;
+height: 100%;
 background-color: #E4E4E4;
 `
 
@@ -34,10 +34,44 @@ width: 17em;
 height: 9em;
 `
 
-export const Categories = styled.section`
+export const Contain = styled.div`
 display: flex;
-flex-direction: column;
-gap:1em;
+height:100%;
+width: 100%;
+
 `
 
-export const BoxBottom = styled.section``
+export const Categories = styled.section`
+display: flex;
+width: 20em;
+flex-direction: column;
+align-items: center;
+gap:1.5em;
+
+`
+
+export const BoxSide = styled.section`
+display: flex;
+flex-direction: column;
+gap: 2em;
+height: 140em;
+width: 100%;
+`
+
+export const BoxCategory = styled.section`
+display: flex;
+height: 100%;
+width: 90%;
+justify-content: space-around;
+align-items:center;
+
+
+
+img{
+    width: 5em;
+    height:5em;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px #8D8D8D;
+}
+`

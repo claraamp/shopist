@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Axios } from 'axios';
 import * as S from './PopupStyle'
 
-export default function Popup({id='modal', onClose = () => {}}) {
+export default function Popup({name='modal', onClose = () => {}}) {
 
     const [criarLista, setCriarLista] = useState('');
     const criar = () => {
@@ -10,10 +10,10 @@ export default function Popup({id='modal', onClose = () => {}}) {
     };
 
     const handleOutsideClick = (e) =>{
-        if(e.target.id === id) onClose();
+        if(e.target.getAttribute('name') === name) onClose();
     }
     return (
-        <S.Box id={id} onClick={handleOutsideClick}>
+        <S.Box name={name} onClick={handleOutsideClick}>
             <S.PopUp>
                 <S.NameList type="text" onChange={(e)=>{setCriarLista(e.target.value)}} placeholder='Digite aqui o nome de sua nova lista' />
                 <S.CreateBtn type="submit" onClick={criar}>Criar</S.CreateBtn>
