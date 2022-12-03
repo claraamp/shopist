@@ -75,3 +75,7 @@ img{
     box-shadow: 3px 3px 3px #8D8D8D;
 }
 `
+export const CreateBtn = styled.button`
+cursor: pointer;
+
+`

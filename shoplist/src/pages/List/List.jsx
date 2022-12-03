@@ -13,7 +13,7 @@ export default function Lista() {
   useEffect(() => {
     const getData = async () => {
       try {
-        const res = await axios.get('http://localhost:5174/listas').then(res => useListas(res.data));
+        const res = await axios.get('http://localhost:5174/getitens').then(res => useListas(res.data));
         console.log(listas)
       } catch (error) {
         console.log(error)

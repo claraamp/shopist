@@ -24,6 +24,10 @@ export default function Itens() {
     getData()
   }, [])
 
+  const add = () => {
+    axios.post('http://localhost:5174/additens').then((response)=>{console.log(response)})
+  }
+
 
   return (
     <S.Container>
@@ -97,9 +101,11 @@ export default function Itens() {
           <Title category={'Frutas'} color={'#AE005E'}/>
           {itens.map(item => (
             <>
+            <S.CreateBtn onClick={() => {add()}}>
             {item.idcategorias === 1 ? 
             <img src={item.url_foto} alt={item.nome} title={item.nome}/> 
             : null}
+            </S.CreateBtn>
             </>
           ))}
         </S.BoxCategory>
@@ -107,9 +113,11 @@ export default function Itens() {
           <Title category={'Verduras'} color={'#BC4400'}/>
           {itens.map(item => (
             <>
+            <S.CreateBtn onClick={() => {add()}}>
             {item.idcategorias === 2 ? 
             <img src={item.url_foto} alt={item.nome} title={item.nome}/> 
             : null}
+            </S.CreateBtn>
             </>
           ))}
         </S.BoxCategory>
@@ -117,9 +125,11 @@ export default function Itens() {
           <Title category={'Limpeza'} color={'#136000'}/>
           {itens.map(item => (
             <>
+            <S.CreateBtn onClick={() => {add()}}>
             {item.idcategorias === 3 ? 
             <img src={item.url_foto} alt={item.nome} title={item.nome}/> 
             : null}
+            </S.CreateBtn>
             </>
           ))}
         </S.BoxCategory>
@@ -127,9 +137,11 @@ export default function Itens() {
           <Title category={'Mercearia'} color={'#010037E'}/>
           {itens.map(item => (
             <>
+            <S.CreateBtn onClick={() => {add()}}>
             {item.idcategorias === 4 ? 
             <img src={item.url_foto} alt={item.nome} title={item.nome}/> 
             : null}
+            </S.CreateBtn>
             </>
           ))}
         </S.BoxCategory>
@@ -137,9 +149,11 @@ export default function Itens() {
           <Title category={'Higiene'} color={'#AE005E'}/>
           {itens.map(item => (
             <>
+            <S.CreateBtn onClick={() => {add()}}>
             {item.idcategorias === 5 ? 
             <img src={item.url_foto} alt={item.nome} title={item.nome}/> 
             : null}
+            </S.CreateBtn>
             </>
           ))}
         </S.BoxCategory>
@@ -147,9 +161,11 @@ export default function Itens() {
           <Title category={'Gelados'} color={'#BC4400'}/>
           {itens.map(item => (
             <>
+            <S.CreateBtn onClick={() => {add()}}>
             {item.idcategorias === 6 ? 
             <img src={item.url_foto} alt={item.nome} title={item.nome}/> 
             : null}
+            </S.CreateBtn>
             </>
           ))}
         </S.BoxCategory>
@@ -157,9 +173,11 @@ export default function Itens() {
           <Title category={'Carnes'} color={'#136000'}/>
           {itens.map(item => (
             <>
+            <S.CreateBtn onClick={() => {add()}}>
             {item.idcategorias === 7 ? 
             <img src={item.url_foto} alt={item.nome} title={item.nome}/> 
             : null}
+            </S.CreateBtn>
             </>
           ))}
         </S.BoxCategory>
@@ -167,9 +185,11 @@ export default function Itens() {
           <Title category={'Bebidas'} color={'#BC4400'} />
           {itens.map(item => (
             <>
+            <S.CreateBtn onClick={() => {add()}}>
             {item.idcategorias === 8 ? 
             <img src={item.url_foto} alt={item.nome} title={item.nome}/> 
             : null}
+            </S.CreateBtn>
             </>
           ))}
         </S.BoxCategory>

@@ -54,7 +54,8 @@ module.exports = {
         let data = {
             "idlistas": req.body.idlistas,
             "idproduto": req.body.idproduto,
-            "nome_produto": req.body.nome_produto
+            "nome_produto": req.body.nome_produto,
+            "nomelista": req.body.nomelista
 
         }
         try {
