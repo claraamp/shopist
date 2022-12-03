@@ -54,8 +54,8 @@ module.exports = {
         let data = {
             "idlistas": req.body.idlistas,
             "idproduto": req.body.idproduto,
-            "nome_produto": req.body.nome_produto,
-            "nomelista": req.body.nomelista
+            "nomelista": req.body.nomelista,
+            "nome_produto": req.body.nome_produto
 
         }
         try {
@@ -84,7 +84,7 @@ module.exports = {
             let response = await db.query('DELETE FROM listas_itens WHERE idlistas_itens=?', [idlistas_itens]);
             res.json(response);
           } catch (error) {
-            console.log(error);
+            console.log(error); 
           }
     }
     
