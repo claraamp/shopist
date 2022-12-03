@@ -40,16 +40,13 @@ img{
     width: 3rem;
     margin-right:2em;
 }
+
+}
+
 @media only screen and (max-width: 410px) {
 img{
     width: 2.5rem;
-    margin-right:1em;
-}
-}
-
-@media only screen and (max-width: 450px) {
-img{
-    width: 2.5rem;
+    margin-right: 1em;
 }
 }
 `
