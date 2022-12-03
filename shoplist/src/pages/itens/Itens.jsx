@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 import * as S from './ItensStyle'
 import Search from '../../Components/SearchList/Search'
 import Logo from '/Logo.png'
@@ -27,7 +28,9 @@ export default function Itens() {
   return (
     <S.Container>
       <S.BoxTop>
-        <S.BtnExit />
+        <Link  to='/'>
+          <S.BtnExit />
+        </Link>
         <Search placeholder={"Que item você precisa?"}/>
         <S.Logo src={Logo} alt="Logo Shopist" />
       </S.BoxTop>

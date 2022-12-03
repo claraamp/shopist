@@ -7,11 +7,9 @@ import Boy from '../../assets/boy.png'
 import Search from '../../Components/SearchList/Search'
 import Popup from '../../Components/Popup/Popup'
 import * as S from './HomeStyle'
-import List from '../../Components/List/List'
-import axios from 'axios'
+import ListCard from '../../Components/ListCard/ListCard'
 
 export default function Home() {
-
 
   const [ btnPopup, setBtnPopup ] = useState(false);
   const [ listas, useListas ] = useState([])
@@ -41,18 +39,12 @@ export default function Home() {
       </S.BoxTop>
       <S.Contain>
         <S.Box>
-          {/* <div>
+          {listas.length >= 1 ? 
+          <ListCard /> :
+          <div>
             <img src={Boy} alt="Ilustração de homem escrevendo em bloco de notas" />
             <p>Ainda não há nada por aqui...</p>
-          </div> */}
-          
-            {listas.map(item => (
-              <div>
-                <List title={item.nomelista} product={item}>
-                </List>
-              </div>
-            ))}
-          
+          </div>}
         </S.Box>
         <S.BoxBottom>
           <S.AddList onClick={() => setBtnPopup(true)}>Criar uma nova lista</S.AddList>

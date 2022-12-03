@@ -58,7 +58,6 @@ display: flex;
 flex-direction: column;
 justify-content: space-evenly;
 
-
 `
 
 export const Box = styled.section`
