@@ -1,10 +1,13 @@
 import React, { useState, useEffect} from 'react';
 import axios from 'axios';
-import * as S from './ListStyle'
-import { Link } from 'react-router-dom'
+import PopupDelete from '../../Components/PopupDelete/PopupDelete';
+import * as S from './ListStyle';
+import { Link } from 'react-router-dom';
 
 
 export default function Lista() {
+
+  const [ btnPopup, setBtnPopup ] = useState(false);
   const [ listas, useListas ] = useState([])
 
   useEffect(() => {
@@ -27,7 +30,7 @@ export default function Lista() {
             <Link to='/'>
               <S.BtnReturn />
             </Link>
-              <S.BtnDelete />
+              <S.BtnDelete onClick={() => setBtnPopup(true)}/>
           </S.BoxTop>
           <S.Title>{item.nomelista}</S.Title>
           <S.ListItems>
@@ -45,6 +48,7 @@ export default function Lista() {
               <S.BtnAdd />
             </Link>
           </S.BoxAddItem>
+          {btnPopup ? <PopupDelete onClose={() => setBtnPopup(false)} /> : null}
         </S.Container>
       ))}
     </>

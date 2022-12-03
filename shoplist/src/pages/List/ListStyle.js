@@ -13,10 +13,6 @@ display: flex;
 flex-direction: column;
 align-items: center;
 
-@media only screen and (max-width: 1280px) {
-    height: 100%;
-}
-
 `
 export const BoxTop = styled.div`
 display: flex;

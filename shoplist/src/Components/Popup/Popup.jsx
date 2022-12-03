@@ -14,10 +14,10 @@ export default function Popup({name='modal', onClose = () => {}}) {
         if(e.target.getAttribute('name') === name) onClose(); 
     }
     return (
-        <S.Box id={name} onClick={handleOutsideClick}>
+        <S.Box name={name} onClick={handleOutsideClick}>
             <S.PopUp>
                 <S.NameList type="text" onChange={(event)=>{setCriarLista(event.target.value)}} placeholder='Digite aqui o nome de sua nova lista' />
-                <S.CreateBtn onClick={criar}>Criar</S.CreateBtn>
+                <S.CreateBtn onClick={() => {criar()}}>Criar</S.CreateBtn>
             </S.PopUp> 
         </S.Box>
     );

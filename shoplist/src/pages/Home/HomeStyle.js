@@ -7,10 +7,6 @@ height: 100vh;
 display: flex;
 flex-direction: column;
 background-color: #2924FF;
-
-@media only screen and (max-width: 1300px) {
-    height: 100%;
-}
 `
 
 export const BoxTop = styled.section`
@@ -42,6 +38,12 @@ cursor: pointer;
 @media only screen and (max-width: 880px) {
 img{
     width: 3rem;
+    margin-right:2em;
+}
+@media only screen and (max-width: 410px) {
+img{
+    width: 2.5rem;
+    margin-right:1em;
 }
 }
 
