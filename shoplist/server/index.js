@@ -24,7 +24,7 @@ app.get('/getitens', ControllerLista.show);
 //LISTAS - deleta listas
 app.delete('/deletarlista', ControllerLista.delete);
 //LISTAS_ITENS - deleta itens da lista
-app.delete('/deletaritens', ControllerLista.gone); 
+app.delete('/deletaritens', ControllerLista.gone);
 
 
 

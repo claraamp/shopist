@@ -24,10 +24,6 @@ export default function Itens() {
     getData()
   }, [])
 
-  const add = () => {
-    axios.post('http://localhost:5174/additens').then((response)=>{console.log(response)})
-  }
-
 
   return (
     <S.Container>
