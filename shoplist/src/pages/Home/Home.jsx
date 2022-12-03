@@ -1,4 +1,5 @@
-import React, { useState} from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 import { Link } from 'react-router-dom'
 import Logo from "/Logo.png"
 import Exit from '../../assets/exit.svg'
@@ -6,13 +7,24 @@ import Boy from '../../assets/boy.png'
 import Search from '../../Components/SearchList/Search'
 import Popup from '../../Components/Popup/Popup'
 import * as S from './HomeStyle'
-import List from '../../Components/List/List'
-import axios from 'axios'
+import ListCard from '../../Components/ListCard/ListCard'
 
 export default function Home() {
 
-
   const [ btnPopup, setBtnPopup ] = useState(false);
+  const [ listas, useListas ] = useState([])
+
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const res = await axios.get('http://localhost:5174/listas').then(res => useListas(res.data));
+        console.log(listas)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    getData()
+  }, [])
 
   return (
     <S.Container>
@@ -27,10 +39,12 @@ export default function Home() {
       </S.BoxTop>
       <S.Contain>
         <S.Box>
+          {listas.length >= 1 ? 
+          <ListCard /> :
           <div>
             <img src={Boy} alt="Ilustração de homem escrevendo em bloco de notas" />
             <p>Ainda não há nada por aqui...</p>
-          </div>
+          </div>}
         </S.Box>
         <S.BoxBottom>
           <S.AddList onClick={() => setBtnPopup(true)}>Criar uma nova lista</S.AddList>

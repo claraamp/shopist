@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 import * as S from './ItensStyle'
 import Search from '../../Components/SearchList/Search'
 import Logo from '/Logo.png'
@@ -16,7 +17,6 @@ export default function Itens() {
       try {
         const res = await axios.get('http://localhost:5174/itens').then(res => useItens(res.data));
         console.log(itens)
-        
       } catch (error) {
         console.log(error)
       }
@@ -28,7 +28,9 @@ export default function Itens() {
   return (
     <S.Container>
       <S.BoxTop>
-        <S.BtnExit />
+        <Link  to='/'>
+          <S.BtnExit />
+        </Link>
         <Search placeholder={"Que item você precisa?"}/>
         <S.Logo src={Logo} alt="Logo Shopist" />
       </S.BoxTop>

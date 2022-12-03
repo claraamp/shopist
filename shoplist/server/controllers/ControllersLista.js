@@ -26,7 +26,7 @@ module.exports = {
     async find (req,res) {
         try {
         let response = await db.query('SELECT * FROM listas')
-        res.json(response[0]);
+        res.send(response[0]);
         } catch (error) {
             console.log(error);
         }

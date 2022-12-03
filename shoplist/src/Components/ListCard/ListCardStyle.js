@@ -15,6 +15,11 @@ border-radius: .5em;
 box-shadow: 8px 8px 3px rgba(0, 0, 0, 0.3);
 overflow: hidden;
 
+a{
+    text-decoration: none;
+    color: #E4E4E4;
+}
+
 `
 
 export const Title = styled.h2`
@@ -43,8 +48,6 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 height: 1.8em;
-
-
 `
 
 export const BoxItem = styled.div`
@@ -57,7 +60,6 @@ gap: 3em;
 font-weight: 500;
 font-size: .9em;
 cursor: pointer;
-
 `
 
 export const NameItem = styled.div`

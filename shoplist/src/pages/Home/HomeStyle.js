@@ -7,10 +7,6 @@ height: 100vh;
 display: flex;
 flex-direction: column;
 background-color: #2924FF;
-
-@media only screen and (max-width: 1300px) {
-    height: 100%;
-}
 `
 
 export const BoxTop = styled.section`
@@ -42,12 +38,15 @@ cursor: pointer;
 @media only screen and (max-width: 880px) {
 img{
     width: 3rem;
-}
+    margin-right:2em;
 }
 
-@media only screen and (max-width: 450px) {
+}
+
+@media only screen and (max-width: 410px) {
 img{
     width: 2.5rem;
+    margin-right: 1em;
 }
 }
 `
@@ -57,7 +56,6 @@ height: 100%;
 display: flex;
 flex-direction: column;
 justify-content: space-evenly;
-
 
 `
 
@@ -69,6 +67,19 @@ height: 100%;
 justify-content: center;
 width: 95%;
 margin: 0 auto;
+`
+export const ContainerList = styled.div`
+background-color: #010037;
+width: 18rem;
+height: 15em;
+color: #E4E4E4;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+padding-left: 1em;
+border-radius: .5em;
+box-shadow: 8px 8px 3px rgba(0, 0, 0, 0.3);
+overflow: hidden;
 `
 
 export const BoxBottom = styled.section`
