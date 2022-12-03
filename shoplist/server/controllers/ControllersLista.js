@@ -65,6 +65,29 @@ module.exports = {
         }
     },
 
+    async delete (req, res) {
+        let idlistas = req.body.idlistas;
+    
+        try {
+          let response = await db.query('DELETE FROM listas WHERE idlistas=?', [idlistas]);
+          res.json(response);
+        } catch (error) {
+          console.log(error);
+        }
+      },
+    
+    async gone (req,res) {
+        let idlistas_itens = req.body.idlistas_itens
+
+        try {
+            let response = await db.query('DELETE FROM listas_itens WHERE idlistas_itens=?', [idlistas_itens]);
+            res.json(response);
+          } catch (error) {
+            console.log(error);
+          }
+    }
+    
+
 
 
 }
